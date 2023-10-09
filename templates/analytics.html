@@ -1,0 +1,356 @@
+<html lang="en" class="html">
+
+<head>
+    <title>DO'MORE | Analytics</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/cerulean/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='images/dashboard/bg.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.99;
+        }
+
+        .mychart_style {
+            background-color: whitesmoke;
+            height: 25%;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #knowMoreBtn,
+        #knowMoreBtn1 {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .chart-container {
+            background-color: whitesmoke;
+            position: relative;
+            margin: auto;
+            height: 80vh;
+            width: 80vw;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .chart-container {
+                height: 60vh;
+                width: 100vw;
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+	<!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand me-3 logo" href="{{ url_for('index') }}">
+                <b>DO'MORE</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}#advertise">Advertisement</a>
+                      </li>                      
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link active" href="{{ url_for('analytics') }}">Data Analytics</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('aboutus') }}">About us</a>
+                    </li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+<br><br>
+
+<h3 class="p-3 rounded shadow-lg text-center">
+    <b>DATA ANALYTICS</b>
+  </h3><br><br>
+
+    <div class="services_content" id="data">
+        <h2 class="text-center"><b>People donating money to the donation organizations Annually!!</b></h2>
+    </div>
+
+    <!--Chart.js1-->
+    <div class="mychart_style">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: '# Amount given to donations',
+                    data: [358.38, 264.58, 298.42, 281.86, 292.09, 449.64, 466.23, 484.85, 298.42, 500.23],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Amount dedicated for Donations Annually'
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Years'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Amount in Billions'
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                animation: {
+                    duration: 2000, // Animation duration in milliseconds
+                    easing: 'easeInOutQuad' // Animation easing function
+                }
+            }
+
+
+
+
+        });
+    </script>
+    <br>
+    <button id="knowMoreBtn" class="btn btn-primary rounded-pill text-center">Know More</button>
+    <br>
+    <div id="infoBox" class="d-none">
+        <p><b>Donation to charitable organizations has been a vital source of financial support for various social
+                causes,
+                including healthcare, education, and poverty alleviation. Annually, individuals and corporations
+                contribute
+                significant amounts to these organizations to aid in their charitable work. The growth of digital
+                payment
+                systems has further facilitated the donation process, making it easy and convenient for donors to
+                support
+                their preferred causes. The trend towards socially responsible consumerism has also led to an increased
+                awareness of the importance of charitable giving, resulting in more people contributing to donations
+                organizations than ever before.</b></p>
+    </div>
+    <script>
+        var knowMoreBtn = document.getElementById("knowMoreBtn");
+        var infoBox = document.getElementById("infoBox");
+
+        knowMoreBtn.addEventListener("click", function () {
+            if (infoBox.classList.contains("d-none")) {
+                infoBox.classList.remove("d-none");
+            } else {
+                infoBox.classList.add("d-none");
+            }
+        });
+
+    </script>
+
+    <!--Chart.js2-->
+
+    <div class="services_content">
+        <h2 class="text-center"><b>The Bar chart shows the amount of money raised for different causes!!</b>
+        </h2>
+    </div>
+    <div class="chart-container">
+        <canvas id="myChart1"></canvas>
+    </div>
+
+    <script>
+        var ctx1 = document.getElementById('myChart1');
+        var myChart = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Education', 'Healthcare', 'Hunger Relief', 'Disaster Relief', 'Animal Welfare'],
+                datasets: [{
+                    label: 'Donations by Cause',
+                    data: [500, 750, 1000, 250, 350],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Amount dedicated for charity for various sectors'
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Organizations'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Amount in Billions'
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                animation: {
+                    duration: 2000, // Animation duration in milliseconds
+                    easing: 'easeInOutQuad' // Animation easing function
+                }
+            }
+        });
+    </script>
+    <br>
+    <button id="knowMoreBtn1" class="btn btn-primary rounded-pill text-center">Know More</button>
+    <br>
+    <div id="infoBox1" class="d-none">
+        <p><b>Charities donate money to various sectors including education, healthcare, disaster management, and hunger
+                relief to help those in need. These organizations aim to improve access to education, provide medical
+                assistance, respond to disasters, and address hunger and poverty. Donations to these sectors can have a
+                significant impact on the lives of people and communities affected by these issues.</b></p>
+    </div>
+
+    <br><br>
+    <script>
+        var knowMoreBtn1 = document.getElementById("knowMoreBtn1");
+        var infoBox1 = document.getElementById("infoBox1");
+
+        knowMoreBtn1.addEventListener("click", function () {
+            if (infoBox1.classList.contains("d-none")) {
+                infoBox1.classList.remove("d-none");
+            } else {
+                infoBox1.classList.add("d-none");
+            }
+        });
+
+    </script>
+
+    <!--Footer-->
+
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="text-uppercase">Address</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa fa-map-marker-alt fa-fw"></i>
+                            Cambridge woods drive, Tampa, Florida, 33613
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            813 456 789
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="text-uppercase">Useful links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('analytics') }}">Analytics</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <section class="mb-4">
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

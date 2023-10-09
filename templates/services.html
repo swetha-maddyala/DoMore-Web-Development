@@ -1,0 +1,600 @@
+<html lang="en" class="html">
+
+<head>
+    <title>DO'MORE | Services</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/cerulean/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='images/dashboard/bg.jpg') }}") no-repeat center center fixed;
+            /* background-color: #FFFFF0; */
+            background-size: cover;
+            opacity: 0.99;
+        }
+
+        .custom-font {
+            font-family: 'CustomFont';
+            font-weight: bold;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+
+        .card {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        @media only screen and (max-width: 600px) {
+            .chart-container {
+                height: 60vh;
+                width: 100vw;
+            }
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand me-3 logo" href="{{ url_for('index') }}">
+                <b>DO'MORE</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarColor01">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('index') }}">Home
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link active" href="{{ url_for('services') }}">Services</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('dashboard') }}#advertise">Advertisement</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('analytics') }}">Data Analytics</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+                    </li>
+                    <li class="nav-item" style="font-size:x-large">
+                        <a class="nav-link" href="{{ url_for('aboutus') }}">About us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Main-Content-->
+    <br><br>
+    <div class="content">
+        <h3 class="p-3 rounded shadow-lg text-center">
+          <b>PARTNERED ORGANIZATIONS</b>
+        </h3>
+      </div>      
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2><b>Did you know there are various types of NGOs?</b></h2>
+                <h2>Various Types of NGO's</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body" style="background-color:#8fbfff82">
+            <h2 class="card-title text-center"><i>International</i></h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="https://care.ca/mission-vision-focus/">Care Canada</a></li>
+                <li class="list-group-item"><a href="https://www.icrc.org/en">ICRC</a></li>
+                <li class="list-group-item"><a href="https://ifro.ku.dk/engash/">IFRO</a></li>
+                <li class="list-group-item"><a
+                        href="https://donate.doctorswithoutborders.org/secure/give-monthly-double-your-impact-search-onetime-reverse?ms=ADD2301U3U54&utm_source=google&utm_medium=cpc&utm_campaign=BRAND.MSF_CKMSF-BRAND.MSF-GS-GS-ALL-MSF.E-BO-ALL-RSA-RSARefresh.1-MONTHLY&gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh2B8wecXiX8wUN4xwoB-wmB9GzfbjhsM_LndQP_mkLL1mQzQ0wuEHoaArxJEALw_wcB">MSF</a>
+                </li>
+                <li class="list-group-item"><a
+                        href="https://give.oxfamamerica.org/page/47584/donate/1?transaction.donationAmt=125&en_txn7=branded&en_txn10=BRAND.OXF-GS-ALL-RSA-B.OXFAM.E-18P-ALL-EOY23-PURCHASE&utm_medium=psearch&utm_campaign=FY23-unrestricted-matchEOY23-2&utm_source=google&transaction.recurrpay=Y&utm_term=oxfam%20international&utm_campaign=MROXFAM0.1908.FR.SE.AdWords.Keyword.Brand.General...XD.Campaign&utm_source=google&utm_medium=psearch&hsa_acc=8955072673&hsa_cam=1400171002&hsa_grp=61974898493&hsa_ad=643251440636&hsa_src=g&hsa_tgt=kwd-305653076544&hsa_kw=oxfam%20international&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwtsCgBhDEARIsAE7RYh0HRF2QgdgwHE8IfUn9twwO8ukh6bnVvGTuWqDEqlPEF1vPLO_shcUaAhZZEALw_wcB">Oxfam
+                        International</a></li>
+                <li class="list-group-item"><a href="https://www.worldvision.org/">World Vision International</a></li>
+            </ul>
+            <p class="card-text text-justify mt-3"><small class="bold"><b>INGOs</b> are non-profit organizations that
+                    work globally to address humanitarian, environmental, social, and other issues. They partner with
+                    various stakeholders, including governments and other NGOs, to achieve their objectives.</small></p>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body" style="background-color:#8fbfff82;">
+            <h2 class="card-title text-center"><i>Quasi Autonomous</i></h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="https://www.crownagents.com/  ">Crown Corporation</a></li>
+                <li class="list-group-item"><a href="https://www.yfg.ie/press-statements/author/aoife/">Fine Gael</a>
+                </li>
+                <li class="list-group-item"><a href="https://gatrees.org/">Crown Entites</a></li>
+                <li class="list-group-item"><a href="https://gatrees.org/">Forestry Commission</a></li>
+                <li class="list-group-item"><a
+                        href="https://www.ncsha.org/advocacy-issues/government-sponsored-enterprises-gses/">Goverment
+                        sponsored</a></li>
+                <li class="list-group-item"><a href="https://www.loc.gov/item/lcwaN0026581/">Indonesian Ulema
+                        council</a></li>
+            </ul>
+            <p class="card-text text-justify mt-3"><small class="bold"><b>Quasi-autonomous non-governmental
+                        organization, </b>an organization or agency that
+                    receives funding from a government but is able to act independently.</small></p>
+        </div>
+    </div>
+
+
+    <div class="card mb-3">
+        <div class="card-body" style="background-color:#8fbfff82;">
+            <h2 class="card-title text-center"><i>Environmental</i></h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a
+                        href="https://en.wikipedia.org/wiki/Global_Alliance_on_Health_and_Pollution">Global Alliance on
+                        Health and Pollution</a></li>
+                <li class="list-group-item"><a
+                        href="https://en.wikipedia.org/wiki/Earth_System_Governance_Project">Earth System Governance
+                        Project</a></li>
+                <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/School_Strike_for_Climate">School
+                        Strike for Climate</a>
+                </li>
+                <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/Global_Green_Growth_Institute">Global
+                        Green Growth Institute</a></li>
+                <li class="list-group-item"><a
+                        href="https://en.wikipedia.org/wiki/Intergovernmental_Panel_on_Climate_Change">Intergovernmental
+                        Panel on Climate Change</a></li>
+                <li class="list-group-item"><a
+                        href="https://en.wikipedia.org/wiki/International_Union_for_Conservation_of_Nature">International
+                        Union for Conservation of Nature</a>
+                </li>
+            </ul>
+            <p class="card-text text-justify mt-3"><small class="bold"><b>An ENGO (environmental non-governmental
+                        organization)</b> is a non-governmental
+                    organization (NGO) in the field of environmentalism. These organizations operate both locally and
+                    internationally which makes them play an important role in dealing with different kinds of
+                    environmental
+                    issues that are happening in the contemporary world.</small></p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="col-md-12 text-center">
+        <h2><b>The lists of various types of organizations helping needy people are as
+                follows</b></h2>
+    </div>
+
+    <br>
+    <!--Carousel-content-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="nonprofit-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#nonprofit-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#nonprofit-carousel" data-slide-to="1"></li>
+                        <li data-target="#nonprofit-carousel" data-slide-to="2"></li>
+                        <li data-target="#nonprofit-carousel" data-slide-to="3"></li>
+                        <li data-target="#nonprofit-carousel" data-slide-to="4"></li>
+                        <li data-target="#nonprofit-carousel" data-slide-to="5"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/nonprofit_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="Non-profit"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Private Non-profit
+                                                        Organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">American Red Cross</li>
+                                                    <li class="list-group-item">Save the Children</li>
+                                                    <li class="list-group-item">Habitat for Humanity</li>
+                                                    <li class="list-group-item">World Wildlife Fund</li>
+                                                    <li class="list-group-item">Feeding America</li>
+                                                    <li class="list-group-item">Oxfam</li>
+                                                    <li class="list-group-item">Doctors Without Borders</li>
+                                                    <li class="list-group-item">The Nature Conservancy</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/nonprofit-large.png')}}"
+                                            class="card-img-top mx-auto d-block" alt="Non-profit"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Public Non-profit
+                                                        Organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Public Hospitals</li>
+                                                    <li class="list-group-item">Public Schools</li>
+                                                    <li class="list-group-item">Public Libraries</li>
+                                                    <li class="list-group-item">Public Parks</li>
+                                                    <li class="list-group-item">Public Museums</li>
+                                                    <li class="list-group-item">Public Broadcasting</li>
+                                                    <li class="list-group-item">Public Housing Authorities</li>
+                                                    <li class="list-group-item">Public Transportation Systems</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image src="{{url_for('static', filename='images/services/charity_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="Non-profit"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <br>
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Charitable organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">American Red Cross</li>
+                                                    <li class="list-group-item">Doctors Without Borders</li>
+                                                    <li class="list-group-item">Feeding America</li>
+                                                    <li class="list-group-item">United Way</li>
+                                                    <li class="list-group-item">Habitat for Humanity</li>
+                                                    <li class="list-group-item">World Vision</li>
+                                                    <li class="list-group-item">St. Jude Children's Research Hospital
+                                                    </li>
+                                                    <li class="list-group-item">Make-A-Wish Foundation</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/education_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="Non-profit"
+                                            style="max-height: 150px; max-width: 150px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Educational organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Khan Academy</li>
+                                                    <li class="list-group-item">Teach For America</li>
+                                                    <li class="list-group-item">National Geographic Society</li>
+                                                    <li class="list-group-item">Boys & Girls Clubs of America</li>
+                                                    <li class="list-group-item">Sesame Workshop </li>
+                                                    <li class="list-group-item">College Board </li>
+                                                    <li class="list-group-item">International Baccalaureate</li>
+                                                    <li class="list-group-item">National Education Association</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/religious_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="Religious"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <br>
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Religious Organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Salvation Army</li>
+                                                    <li class="list-group-item">Catholic Charities</li>
+                                                    <li class="list-group-item">Jewish Community Centers</li>
+                                                    <li class="list-group-item">Lutheran Social Services</li>
+                                                    <li class="list-group-item">Islamic Relief USA</li>
+                                                    <li class="list-group-item">The Church of Jesus Christ of Latter
+                                                    </li>
+                                                    <li class="list-group-item">Seventh-day Adventist Community Services
+                                                    </li>
+                                                    <li class="list-group-item">Buddhist Tzu Chi Foundation</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/scientific_image.jpeg')}}"
+                                            class="card-img-top mx-auto d-block" alt="scientific"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Scientific or Research
+                                                        organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">American Association for the Advancement
+                                                        of
+                                                        Science</li>
+                                                    <li class="list-group-item">National Institutes of Health</li>
+                                                    <li class="list-group-item">Woods Hole Oceanographic Institution
+                                                    </li>
+                                                    <li class="list-group-item">Smithsonian Institution</li>
+                                                    <li class="list-group-item">The Nature Conservancy</li>
+                                                    <li class="list-group-item">Union of Concerned Scientists</li>
+                                                    <li class="list-group-item">American Cancer Society</li>
+                                                    <li class="list-group-item">Environmental Defense Fund</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/environmental_img.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="Religious"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <br>
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Environmental organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Sierra Club</li>
+                                                    <li class="list-group-item">Greenpeace</li>
+                                                    <li class="list-group-item">The Nature Conservancy</li>
+                                                    <li class="list-group-item">Environmental Defense Fund</li>
+                                                    <li class="list-group-item">World Wildlife Fund</li>
+                                                    <li class="list-group-item">National Resources Defense Council</li>
+                                                    <li class="list-group-item">Ocean Conservancy</li>
+                                                    <li class="list-group-item">Rainforest Alliance</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/cultural_image.png')}}"
+                                            class="card-img-top mx-auto d-block" alt="scientific"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Arts and Cultural
+                                                        Organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Metropolitan Museum of Art</li>
+                                                    <li class="list-group-item">Smithsonian Institution</li>
+                                                    <li class="list-group-item">The Museum of Modern Art</li>
+                                                    <li class="list-group-item">National Endowment for the Arts</li>
+                                                    <li class="list-group-item">National Trust for Historic Preservation
+                                                    </li>
+                                                    <li class="list-group-item">American Film Institute</li>
+                                                    <li class="list-group-item">American Alliance of Museums</li>
+                                                    <li class="list-group-item">Library of Congress</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image src="{{url_for('static', filename='images/services/advocacy_img.png')}}"
+                                            class="card-img-top mx-auto d-block" alt="Advocacy"
+                                            style="max-height: 200px; max-width: 200px;">
+                                            <br>
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Advocacy organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Human Rights Campaign</li>
+                                                    <li class="list-group-item">American Civil Liberties Union</li>
+                                                    <li class="list-group-item">National Organization for Women</li>
+                                                    <li class="list-group-item">Anti-Defamation League</li>
+                                                    <li class="list-group-item">Environmental Working Group</li>
+                                                    <li class="list-group-item">Amnesty International</li>
+                                                    <li class="list-group-item">Planned Parenthood</li>
+                                                    <li class="list-group-item">National Rifle Association</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/membership_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="membership_image"
+                                            style="max-height: 200px; max-width: 220px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Membership organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">AARP (formerly known as the American
+                                                        Association of Retired Persons)</li>
+                                                    <li class="list-group-item">National Rifle Association</li>
+                                                    <li class="list-group-item">American Automobile Association (AAA)
+                                                    </li>
+                                                    <li class="list-group-item">Rotary International</li>
+                                                    <li class="list-group-item">Kiwanis International
+                                                    </li>
+                                                    <li class="list-group-item">American Film Institute</li>
+                                                    <li class="list-group-item">American Alliance of Museums</li>
+                                                    <li class="list-group-item">American Medical Association</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/mutual_benefit_image.jpg')}}"
+                                            class="card-img-top mx-auto d-block" alt="mutual_benefit_image"
+                                            style="max-height: 140px; max-width: 200px;">
+                                            <br>
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Mutual Benefit Organizations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Fraternal Order of Eagles</li>
+                                                    <li class="list-group-item">Knights of Columbus</li>
+                                                    <li class="list-group-item">American Automobile Association (AAA)
+                                                    </li>
+                                                    <li class="list-group-item">American Association of Retired Persons
+                                                        (AARP)</li>
+                                                    <li class="list-group-item">Credit unions</li>
+                                                    <li class="list-group-item">Professional associations</li>
+                                                    <li class="list-group-item">Trade unions</li>
+                                                    <li class="list-group-item">Sports clubs</li>
+                                                </ul>
+
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card mb-4">
+                                        <image
+                                            src="{{url_for('static', filename='images/services/foundation_image.jpeg')}}"
+                                            class="card-img-top mx-auto d-block" alt="foundation_image"
+                                            style="max-height: 160px; max-width: 220px;">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-center"><i>Foundations</i>
+                                                </h5>
+                                                <ul class="list-group text-center">
+                                                    <li class="list-group-item">Bill and Melinda Gates Foundation</li>
+                                                    <li class="list-group-item">Ford Foundation</li>
+                                                    <li class="list-group-item">Rockefeller Foundation</li>
+                                                    <li class="list-group-item">Kellogg Foundation</li>
+                                                    <li class="list-group-item">Andrew W. Mellon Foundation
+                                                    </li>
+                                                    <li class="list-group-item">Robert Wood Johnson Foundation</li>
+                                                    <li class="list-group-item">Open Society Foundations</li>
+                                                    <li class="list-group-item">Kresge Foundation</li>
+                                                </ul>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#nonprofit-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#nonprofit-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only"></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content" style="border: 1px solid #ddd; box-shadow: 10px 10px 10px rgba(0,0,0,0.1); padding:10px">
+        <p style="color: black;"><b>We are constantly seeking new opportunities to collaborate with NGOs to achieve our
+                shared goals of social and environmental responsibility. If you represent an NGO and are interested in
+                partnering with us, please don't hesitate to get in touch.</b></p>
+        <a href="{{ url_for('register') }}">
+            <button class="btn btn-primary rounded-pill">Register</button>
+        </a>
+    </div>
+    <!--Footer-->
+
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="text-uppercase">Address</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa fa-map-marker-alt fa-fw"></i>
+                            Cambridge woods drive, Tampa, Florida, 33613
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            813 456 789
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="text-uppercase">Useful links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('services') }}">Services</a></li>
+                        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ url_for('analytics') }}">Analytics</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="{{ url_for('aboutus') }}">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <section class="mb-4">
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
